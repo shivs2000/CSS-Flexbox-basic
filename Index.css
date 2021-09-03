@@ -1,0 +1,33 @@
+.flex-container {
+  display: flex;
+  background: black;
+  flex-wrap: wrap; /* used for avoiding overflow like if there is minimum width property*/
+  flex-flow: column; /* row-reverse column-reverse row*/
+}
+
+.box {
+  height: 30px;
+  /* width: 250px; */
+  /*min-width: 300px;*/ /* flex-wrap will not work for min width instead use flex-basis*/
+  flex-basis: 300px;
+}
+
+.one {
+  background-color: rgb(153, 105, 42);
+  flex-grow: 1; /* it is the rate for grow in fles container*/
+  flex-shrink: 3; /* it is used for shrinking in case of screen resize*/
+  /* flex: flex-grow flex-shrink flex-basis      format to use all in one line*/
+  order: 2;
+}
+.two {
+  background-color: rgb(42, 49, 153);
+  flex-grow: 2;
+  flex-shrink: 2;
+  order: 3;
+}
+.three {
+  background-color: rgb(42, 153, 70);
+  flex-grow: 3;
+  flex-shrink: 1;
+  order: 1; /* this gives the orderingg of appearance in flex display lower means first appear*/
+}
